@@ -29,5 +29,14 @@ public class Garagem99Service {
     
     }
     
+    public List<VeiculoMinDTO> findByCorIgnoreCase (String cor) {
+        
+        List<Veiculo> result = veiculoRepository.findByCorIgnoreCase(cor);
+        List<VeiculoMinDTO> resultDTO = result.stream().map(x -> new VeiculoMinDTO(x)).toList();
+        return resultDTO;
+    }
+    
+    
+    
     
 }

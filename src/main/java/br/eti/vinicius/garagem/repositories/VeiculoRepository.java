@@ -4,13 +4,17 @@
  */
 package br.eti.vinicius.garagem.repositories;
 
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import br.eti.vinicius.garagem.entities.Veiculo;
+import java.util.List;
 
 /**
  *
  * @author digma
  */
 public interface VeiculoRepository extends JpaRepository<Veiculo, Long>  {
+    List<Veiculo> findByCorIgnoreCase (String cor);
+    List<Veiculo> findByAno(int ano);
     
 }
