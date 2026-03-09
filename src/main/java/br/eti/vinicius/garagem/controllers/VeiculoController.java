@@ -40,4 +40,17 @@ public class VeiculoController {
         List<VeiculoMinDTO> result = garagem99Service.findByCorIgnoreCase(cor);
         return ResponseEntity.ok(result);
     }
+    
+    @GetMapping("/forsale/ano/{ano}") 
+    public ResponseEntity <List<VeiculoMinDTO>> findByAno(@PathVariable int ano) {
+        List<VeiculoMinDTO> result = garagem99Service.findByAno(ano);
+        return ResponseEntity.ok(result);
+    }
+    
+    @GetMapping("/forsale/id/{id}") 
+    public ResponseEntity <List<Veiculo>> findById(@PathVariable long id) {
+        List<Veiculo> result = garagem99Service.findById(id);
+        return ResponseEntity.ok(result);
+    }
+    
 }

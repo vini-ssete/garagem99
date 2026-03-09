@@ -9,6 +9,7 @@ import br.eti.vinicius.garagem.entities.Veiculo;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import br.eti.vinicius.garagem.repositories.VeiculoRepository;
+import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 /**
@@ -35,6 +36,21 @@ public class Garagem99Service {
         List<VeiculoMinDTO> resultDTO = result.stream().map(x -> new VeiculoMinDTO(x)).toList();
         return resultDTO;
     }
+    
+    public List<VeiculoMinDTO> findByAno (int ano) {
+        
+        List<Veiculo> result = veiculoRepository.findByAno(ano);
+        List<VeiculoMinDTO> resultDTO = result.stream().map(x -> new VeiculoMinDTO(x)).toList();
+        return resultDTO;
+    }
+    
+    public List<Veiculo> findById (long id) {
+        
+        Optional<Veiculo> result = veiculoRepository.findById(id);
+        List<Veiculo> list = result.stream().toList();
+        return list;
+    }
+
     
     
     
