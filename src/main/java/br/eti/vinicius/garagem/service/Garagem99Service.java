@@ -8,9 +8,9 @@ import br.eti.vinicius.garagem.DTO.VeiculoMinDTO;
 import br.eti.vinicius.garagem.entities.Veiculo;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import br.eti.vinicius.garagem.repositories.VeiculoRepository;
 import java.util.Optional;
 import org.springframework.stereotype.Service;
+import br.eti.vinicius.garagem.repositories.GaragemRepository;
 
 /**
  *
@@ -20,7 +20,7 @@ import org.springframework.stereotype.Service;
 public class Garagem99Service {
     
     @Autowired
-    private VeiculoRepository veiculoRepository;
+    private GaragemRepository veiculoRepository;
     
     public List<VeiculoMinDTO> findAll() {
         

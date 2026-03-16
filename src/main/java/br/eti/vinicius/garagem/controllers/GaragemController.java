@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author digma
  */
 @RestController
-public class VeiculoController {
+public class GaragemController {
     
     @Autowired
     private Garagem99Service garagem99Service;

@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author digma
  */
-public interface VeiculoRepository extends JpaRepository<Veiculo, Long>  {
+public interface GaragemRepository extends JpaRepository<Veiculo, Long>  {
     List<Veiculo> findByCorIgnoreCase (String cor);
     List<Veiculo> findByAno(int ano);
     
